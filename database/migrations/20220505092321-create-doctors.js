@@ -17,7 +17,7 @@ module.exports = {
       specialization: {
         type: Sequelize.STRING
       },
-      age: {
+      dob: {
         type: Sequelize.INTEGER
       },
       practice_year: {

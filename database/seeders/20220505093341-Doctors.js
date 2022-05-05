@@ -8,7 +8,7 @@ module.exports = {
           name: "John Doe",
           email: "johndoe@example.com",
           specialization: "General Physician",
-          age: 45,
+          dob: 1980,
           practice_year: 2001,
           country: "Germany",
           state: "Berlin",
