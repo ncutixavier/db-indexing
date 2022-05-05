@@ -2,6 +2,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Doctors', {
+      
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -46,7 +47,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    })
+
+    await queryInterface.addIndex('Doctors',['specialization']);
+    await queryInterface.addIndex('Doctors',['zip']);
+    await queryInterface.addIndex('Doctors',['city']);
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Doctors');
