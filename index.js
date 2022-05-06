@@ -35,10 +35,6 @@ const createDoctor = async (req, res) => {
   }
 };
 
-var startTime = performance.now();
 for (let i = 0; i < 30000; i++) {
   createDoctor();
 }
-var endTime = performance.now();
-
-console.log(`10 doctors took ${endTime - startTime} milliseconds`);
