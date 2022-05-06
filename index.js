@@ -31,14 +31,13 @@ const createDoctor = async (req, res) => {
     const doctors = await models.Doctors.create(generateRandomDoctor());
     console.log("Created doctor: " + doctors.id);
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    console.log(error)
+
   }
 };
 
-var startTime = performance.now();
+
 for (let i = 0; i < 30000; i++) {
   createDoctor();
 }
-var endTime = performance.now();
 
-console.log(`10 doctors took ${endTime - startTime} milliseconds`);
