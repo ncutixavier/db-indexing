@@ -49,11 +49,11 @@ module.exports = {
       }
     })
 
-    await queryInterface.addIndex('Doctors',['specialization']);
-    await queryInterface.addIndex('Doctors',['zip']);
-    await queryInterface.addIndex('Doctors',['city']);
+    await queryInterface.addIndex('doctors',['specialization']);
+    await queryInterface.addIndex('doctors',['zip']);
+    await queryInterface.addIndex('doctors',['city']);
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Doctors');
+    await queryInterface.dropTable('doctors');
   }
 };
