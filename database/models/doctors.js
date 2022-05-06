@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     hospital: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Doctors',
+    modelName: 'doctors',
   });
   return Doctors;
 };
