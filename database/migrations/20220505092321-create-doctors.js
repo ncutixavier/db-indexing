@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('doctors', {
+    await queryInterface.createTable('Doctors', {
       
       id: {
         allowNull: false,
@@ -49,12 +49,12 @@ module.exports = {
       }
     })
 
-    // await queryInterface.addIndex('Doctors',['specialization']);
-    // await queryInterface.addIndex('Doctors',['zip']);
-    // await queryInterface.addIndex('Doctors',['city']);
-    // await queryInterface.addIndex('Doctors',['specialization','zip']);
-    // await queryInterface.addIndex('Doctors',['specialization','city']);
-    // await queryInterface.addIndex('Doctors',['specialization','hospital']);
+    await queryInterface.addIndex('Doctors',['specialization']);
+    await queryInterface.addIndex('Doctors',['zip']);
+    await queryInterface.addIndex('Doctors',['city']);
+    await queryInterface.addIndex('Doctors',['specialization','zip']);
+    await queryInterface.addIndex('Doctors',['specialization','city']);
+    await queryInterface.addIndex('Doctors',['specialization','hospital']);
     await queryInterface.addIndex('Doctors',['specialization','city','practice_year']);
     await queryInterface.addIndex('Doctors',['specialization','zip','practice_year']);
   },
