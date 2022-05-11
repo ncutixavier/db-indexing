@@ -19,7 +19,7 @@ routes.get('/:query', async(req,res)=>{
                 data:data.data
             })
         }else{
-            res.status(500).json({
+            res.status(400).json({
                 error:data.data
             })
         }
