@@ -17,7 +17,6 @@ const queryRun = async (query)=>{
     response.status = false
     response.data = error.message
     return response
-    // console.log(error)
   }
 
 }

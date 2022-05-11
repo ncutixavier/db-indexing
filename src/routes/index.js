@@ -31,13 +31,6 @@ routes.get('/:query', async(req,res)=>{
     }
     
 
-    // [
-//   {
-//   "query":"",
-//   "single_indexes":"",
-//   "double_inde":"",
-//   }
-// ]
 });
 
 export default routes;
