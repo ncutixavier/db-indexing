@@ -1,6 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
+
     await queryInterface.createTable('Doctors', {
       
       id: {
@@ -57,6 +58,7 @@ module.exports = {
     await queryInterface.addIndex('Doctors',['specialization','hospital']);
     await queryInterface.addIndex('Doctors',['specialization','city','practice_year']);
     await queryInterface.addIndex('Doctors',['specialization','zip','practice_year']);
+
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Doctors');
