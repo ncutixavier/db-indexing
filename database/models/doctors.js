@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     specialization: DataTypes.STRING,
-    age: DataTypes.INTEGER,
+    dob: DataTypes.INTEGER,
     practice_year: DataTypes.INTEGER,
     country: DataTypes.STRING,
     state: DataTypes.STRING,
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     hospital: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Doctors',
+    modelName: 'doctors',
   });
   return Doctors;
 };
